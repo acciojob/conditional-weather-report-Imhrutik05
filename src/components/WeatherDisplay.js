@@ -8,9 +8,12 @@ function WeatherDisplay({weatherData}) {
     } else {
         styleObj.color = 'blue';
     }
-    
+
     return (
-        <p><span style={styleObj}>{weatherData.temperature}</span>{weatherData.conditions}</p>
+        <>
+            <p>Temperature: <span style={styleObj}>{weatherData.temperature}</span></p>
+            <p>Conditions: {weatherData.conditions}</p>
+        </>
     )
 }
 
